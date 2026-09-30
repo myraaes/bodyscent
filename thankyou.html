@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ขอบคุณที่สั่งซื้อ | Body Scent</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page-specific additions for thankyou.html (can be moved into style.css) */
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex: 1; display: flex; align-items: center; }
+    main > .section { width: 100%; }
+    .page-title { font-size: var(--step-3); line-height: 1.5; }
+    .thanks__rule {
+      display: block;
+      width: 2.5rem;
+      height: 1px;
+      margin-block: var(--space-2) var(--space-3);
+      background: var(--bronze);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head mb-0">
+          <h1 class="page-title">ขอบคุณที่สั่งซื้อ</h1>
+          <span class="thanks__rule" aria-hidden="true"></span>
+          <p class="lead">เราได้รับคำสั่งซื้อเรียบร้อยแล้ว ทางร้านจะติดต่อกลับตามช่องทางที่คุณแจ้งไว้</p>
+          <a class="btn" href="index.html">กลับหน้าแรก</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <a class="brand" href="index.html">Body Scent</a>
+        <nav class="nav" aria-label="เมนูท้ายเว็บ">
+          <a href="index.html">หน้าแรก</a>
+          <a href="product.html">สินค้า</a>
+        </nav>
+      </div>
+      <hr>
+      <p class="mb-0">© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

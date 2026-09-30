@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Body Scent | เลือกกลิ่นให้ตรงกับอารมณ์ของวันนี้</title>
+  <meta name="description" content="Body Scent น้ำหอมฉีดตัวและโรลออน แบ่งตามอารมณ์ 4 แบบ สดชื่น หวานละมุน มั่นใจ และโรแมนติก">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page-specific additions for index.html (can be moved into style.css) */
+    :root { --header-h: 4.5rem; }
+    @media (max-width: 40rem) { :root { --header-h: 6rem; } }
+
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      min-height: calc(100vh - var(--header-h));
+      min-height: calc(100svh - var(--header-h));
+    }
+    .hero__inner { position: relative; z-index: 1; max-width: 54rem; }
+    .hero h1 {
+      font-size: clamp(2rem, 1rem + 4vw, 3.5rem);
+      line-height: 1.5;
+      margin-bottom: var(--space-3);
+    }
+    .hero p { max-width: 32rem; }
+
+    /* Concentric hairlines fading outward, like scent spreading in air */
+    .hero__rings {
+      position: absolute;
+      top: 50%;
+      right: -14rem;
+      width: 46rem;
+      height: 46rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+      background: repeating-radial-gradient(
+        circle at center,
+        transparent 0,
+        transparent 3.4rem,
+        rgba(166, 124, 78, 0.35) 3.4rem,
+        rgba(166, 124, 78, 0.35) calc(3.4rem + 1px)
+      );
+      -webkit-mask-image: radial-gradient(circle, #000 25%, transparent 68%);
+              mask-image: radial-gradient(circle, #000 25%, transparent 68%);
+    }
+    @media (max-width: 40rem) {
+      .hero__rings { right: -22rem; opacity: 0.7; }
+    }
+
+    a.mood-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      color: inherit;
+      text-decoration: none;
+    }
+    a.mood-card:hover { color: inherit; }
+    .mood-card__cta {
+      margin-top: auto;
+      padding-top: var(--space-2);
+      font-size: var(--step--1);
+      letter-spacing: 0.05em;
+      color: var(--bronze-deep);
+    }
+    a.mood-card:hover .mood-card__cta { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html" aria-current="page">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__rings" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__inner">
+          <h1>เลือกกลิ่นให้ตรงกับอารมณ์ของวันนี้ ด้วย Body Scent</h1>
+          <p>น้ำหอมฉีดตัวและโรลออน แบ่งตามอารมณ์ 4 แบบ เลือกกลิ่นที่ตรงกับตัวคุณในแต่ละวัน</p>
+          <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="moods">
+      <div class="container">
+        <div class="section__head">
+          <h2>เลือกตามอารมณ์</h2>
+          <p>ทุกอารมณ์มีกลิ่นของมัน กดที่การ์ดเพื่อดูสินค้าในกลิ่นนั้น</p>
+        </div>
+
+        <div class="grid grid--4">
+          <a class="mood-card mood-fresh" href="product.html?mood=fresh">
+            <h3><span class="mood-dot" aria-hidden="true"></span>สดชื่น Fresh</h3>
+            <p>โปร่ง สะอาด เบาสบาย ปลุกความตื่นตัวให้ทุกวันเริ่มต้นได้อย่างสดใส</p>
+            <span class="mood-card__cta">ดูสินค้า Fresh</span>
+          </a>
+
+          <a class="mood-card mood-sweet" href="product.html?mood=sweet">
+            <h3><span class="mood-dot" aria-hidden="true"></span>หวานละมุน Sweet</h3>
+            <p>กลิ่นหวานแผ่วเบา อ่อนโยน น่ารัก ให้ความอบอุ่นสบายใจเหมือนได้ผ่อนคลาย</p>
+            <span class="mood-card__cta">ดูสินค้า Sweet</span>
+          </a>
+
+          <a class="mood-card mood-confident" href="product.html?mood=confident">
+            <h3><span class="mood-dot" aria-hidden="true"></span>มั่นใจ Confident</h3>
+            <p>นิ่ง สะอาด ดูดี น่าเชื่อถือ พร้อมเจอผู้คนได้อย่างเต็มภาคภูมิ</p>
+            <span class="mood-card__cta">ดูสินค้า Confident</span>
+          </a>
+
+          <a class="mood-card mood-romance" href="product.html?mood=romance">
+            <h3><span class="mood-dot" aria-hidden="true"></span>โรแมนติก Romance</h3>
+            <p>อบอุ่น น่าหลงใหล หวานแบบมีเสน่ห์ลึก ทิ้งความประทับใจให้จดจำ</p>
+            <span class="mood-card__cta">ดูสินค้า Romance</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <a class="brand" href="index.html">Body Scent</a>
+        <nav class="nav" aria-label="เมนูท้ายเว็บ">
+          <a href="index.html">หน้าแรก</a>
+          <a href="product.html">สินค้า</a>
+        </nav>
+      </div>
+      <hr>
+      <p class="mb-0">© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

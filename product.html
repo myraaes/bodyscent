@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้าทั้งหมด | Body Scent</title>
+  <meta name="description" content="น้ำหอมฉีดตัว 30ml และ 100ml และโรลออน จาก Body Scent เลือกกรองตามอารมณ์ได้">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page-specific additions for product.html (can be moved into style.css) */
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex: 1; }
+    .page-title {
+      font-size: var(--step-3);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html" aria-current="page">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h1 class="page-title">สินค้าทั้งหมด</h1>
+          <p>ขวดเล็ก 30ml สำหรับทดลองใช้ ขวดใหญ่ 100ml สำหรับใช้ทุกวัน และโรลออนสำหรับพกพา</p>
+        </div>
+
+        <div id="filter-bar" class="filters" role="group" aria-label="กรองสินค้าตามอารมณ์"></div>
+
+        <div id="product-list" class="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <a class="brand" href="index.html">Body Scent</a>
+        <nav class="nav" aria-label="เมนูท้ายเว็บ">
+          <a href="index.html">หน้าแรก</a>
+          <a href="product.html">สินค้า</a>
+        </nav>
+      </div>
+      <hr>
+      <p class="mb-0">© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
